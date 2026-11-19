@@ -1,0 +1,195 @@
+#cookie-stage {
+  position: relative;
+  inline-size: 100%;
+  min-inline-size: 0;
+  min-block-size: 18rem;
+  aspect-ratio: 1;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#cookie-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: none;
+  border-radius: inherit;
+  outline: 0;
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#cookie-canvas.cookie-canvas--dragging,
+#cookie-stage.cookie-stage--dragging #cookie-canvas {
+  cursor: grabbing;
+}
+
+#cookie-canvas:focus-visible {
+  outline: 3px solid #d9853c;
+  outline: 3px solid color-mix(in srgb, #d9853c 78%, white);
+  outline-offset: -5px;
+  border-radius: 1.25rem;
+}
+
+#cookie-stage.cookie-stage--fallback #cookie-canvas {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.cookie-3d-fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.cookie-3d-fallback__cookie {
+  position: relative;
+  inline-size: min(72%, 28rem);
+  aspect-ratio: 1;
+  border: clamp(0.2rem, 1vw, 0.55rem) solid #a45a20;
+  border-radius: 46% 52% 49% 54% / 52% 47% 55% 48%;
+  background:
+    radial-gradient(circle at 24% 20%, rgb(255 220 143 / 0.45) 0 2%, transparent 2.8%),
+    radial-gradient(circle at 63% 68%, rgb(89 35 8 / 0.24) 0 1.7%, transparent 2.5%),
+    radial-gradient(circle at 73% 29%, rgb(98 39 8 / 0.19) 0 1.4%, transparent 2.2%),
+    radial-gradient(circle at 38% 76%, rgb(103 39 7 / 0.22) 0 2%, transparent 3%),
+    radial-gradient(circle at 42% 40%, #d98a39 0, #c7782e 31%, #ae6025 66%, #8c431b 100%);
+  box-shadow:
+    0 1.05rem 0 -0.45rem #713716,
+    0 2.1rem 2.3rem rgb(66 22 7 / 0.26),
+    inset -1.2rem -1.4rem 2.2rem rgb(87 31 5 / 0.28),
+    inset 0.8rem 0.9rem 1.4rem rgb(255 219 147 / 0.22);
+  transform: perspective(48rem) rotateX(15deg) rotateY(-10deg) rotateZ(-4deg);
+}
+
+.cookie-3d-fallback__cookie::after {
+  position: absolute;
+  z-index: -1;
+  inset: 7% -5% -9% 5%;
+  border-radius: 50%;
+  background: #6f3417;
+  content: "";
+  filter: blur(0.18rem);
+}
+
+.cookie-3d-fallback__chip {
+  position: absolute;
+  inline-size: 11%;
+  aspect-ratio: 1;
+  border-radius: 42% 58% 48% 52% / 55% 43% 57% 45%;
+  background: radial-gradient(circle at 34% 26%, #64301f 0, #3b1711 34%, #21100d 82%);
+  box-shadow:
+    0 0.24rem 0.22rem rgb(74 28 5 / 0.32),
+    inset 0.15rem 0.17rem 0.22rem rgb(255 220 191 / 0.12);
+  transform: translate(-50%, -50%) rotate(12deg);
+}
+
+.cookie-3d-fallback__chip:nth-child(1) {
+  inset-block-start: 24%;
+  inset-inline-start: 31%;
+  inline-size: 13%;
+}
+
+.cookie-3d-fallback__chip:nth-child(2) {
+  inset-block-start: 18%;
+  inset-inline-start: 57%;
+  transform: translate(-50%, -50%) rotate(-14deg);
+}
+
+.cookie-3d-fallback__chip:nth-child(3) {
+  inset-block-start: 38%;
+  inset-inline-start: 70%;
+  inline-size: 14%;
+}
+
+.cookie-3d-fallback__chip:nth-child(4) {
+  inset-block-start: 48%;
+  inset-inline-start: 45%;
+  inline-size: 12%;
+  transform: translate(-50%, -50%) rotate(31deg);
+}
+
+.cookie-3d-fallback__chip:nth-child(5) {
+  inset-block-start: 63%;
+  inset-inline-start: 22%;
+}
+
+.cookie-3d-fallback__chip:nth-child(6) {
+  inset-block-start: 76%;
+  inset-inline-start: 50%;
+  inline-size: 13%;
+  transform: translate(-50%, -50%) rotate(-22deg);
+}
+
+.cookie-3d-fallback__chip:nth-child(7) {
+  inset-block-start: 57%;
+  inset-inline-start: 74%;
+  inline-size: 10%;
+}
+
+.cookie-3d-fallback__chip:nth-child(8) {
+  inset-block-start: 34%;
+  inset-inline-start: 18%;
+  inline-size: 9%;
+}
+
+.cookie-3d-fallback__chip:nth-child(9) {
+  inset-block-start: 72%;
+  inset-inline-start: 81%;
+  inline-size: 9%;
+}
+
+.cookie-3d-fallback__chip:nth-child(10) {
+  inset-block-start: 82%;
+  inset-inline-start: 30%;
+  inline-size: 8%;
+}
+
+.cookie-3d-fallback__chip:nth-child(11) {
+  inset-block-start: 48%;
+  inset-inline-start: 88%;
+  inline-size: 7%;
+}
+
+.cookie-3d-fallback__note {
+  position: absolute;
+  inset-block-end: 5%;
+  padding: 0.42rem 0.75rem;
+  border: 1px solid rgb(96 48 27 / 0.2);
+  border-radius: 999px;
+  background: rgb(255 249 238 / 0.8);
+  color: #62402c;
+  font: 600 0.68rem/1.2 sans-serif;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  backdrop-filter: blur(0.35rem);
+}
+
+@media (max-width: 40rem) {
+  #cookie-stage {
+    min-block-size: 17rem;
+  }
+
+  #cookie-canvas {
+    border-radius: 0.85rem;
+  }
+
+  .cookie-3d-fallback__cookie {
+    inline-size: min(74%, 21rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cookie-canvas,
+  .cookie-3d-fallback__cookie {
+    transition: none;
+  }
+}

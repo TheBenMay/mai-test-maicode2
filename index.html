@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Crumb & Co. is a fictional small-batch cookie studio serving big flavor, warm centers, and beautifully boxed treats.">
+  <meta name="theme-color" content="#f8eed8">
+  <meta name="color-scheme" content="light">
+  <title>Crumb &amp; Co. — A little wild. Always warm.</title>
+  <link rel="stylesheet" href="cookie-3d.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="Crumb and Company, back to home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M24 3.5c11.32 0 20.5 9.18 20.5 20.5S35.32 44.5 24 44.5 3.5 35.32 3.5 24 12.68 3.5 24 3.5Z"/>
+            <circle cx="16" cy="15" r="2.7"/>
+            <circle cx="30.5" cy="13.5" r="2.2"/>
+            <circle cx="30" cy="31.5" r="3.1"/>
+            <path d="M13 27.5c3.2 1.8 7.5 2.8 12 2.8 3.4 0 6.7-.6 9.5-1.7"/>
+            <path d="M19 24c0-2.7 2.2-4.9 4.9-4.9s4.9 2.2 4.9 4.9"/>
+          </svg>
+        </span>
+        <span class="brand-name">Crumb <i>&amp;</i> Co.</span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#cookies">Our cookies</a>
+        <a href="#about">About us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-toggle" id="cart-toggle" type="button" aria-label="Open shopping cart, 0 items" aria-haspopup="dialog" aria-controls="cart-drawer">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+            <path d="M4 4h2l1.8 9.3a2 2 0 0 0 2 1.7h7.5a2 2 0 0 0 1.9-1.4L21 8H7.1M10 20h.01M18 20h.01"/>
+          </svg>
+          <span class="cart-label">Your box</span>
+          <span id="cart-count" class="cart-count" aria-live="polite" aria-atomic="true">0</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow"><span aria-hidden="true">✦</span> Small batch. Big personality.</p>
+          <h1 id="hero-title">Soft center.<br><span>Wild edges.</span></h1>
+          <p class="hero-description">The kind of cookie that makes the day stop. Brown butter, generous chocolate, a good crackle of salt—and not a boring bite in the box.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#cookies">
+              Choose your cookies
+              <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m4 10 11 0m-4-4 4 4-4 4"/></svg>
+            </a>
+            <a class="text-link" href="#about">Meet the bakers <span aria-hidden="true">↘</span></a>
+          </div>
+          <ul class="hero-proof" aria-label="What makes our cookies special">
+            <li><strong>24h</strong><span>rested dough</span></li>
+            <li><strong>100%</strong><span>real ingredients</span></li>
+            <li><strong>0</strong><span>tiny portions</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual">
+          <div class="stage-label stage-label-top" aria-hidden="true">
+            <span>Fresh from<br>the oven</span>
+            <svg viewBox="0 0 68 42" focusable="false"><path d="M2 6c16 0 20 31 52 28M46 28l10 6-7 7"/></svg>
+          </div>
+          <div id="cookie-stage">
+            <div class="stage-orbit stage-orbit-one" aria-hidden="true"></div>
+            <div class="stage-orbit stage-orbit-two" aria-hidden="true"></div>
+            <canvas id="cookie-canvas" width="900" height="900" role="img" aria-label="Interactive three-dimensional chocolate chip cookie" aria-describedby="cookie-canvas-help">
+              A golden chocolate chunk cookie with a textured, three-dimensional finish.
+            </canvas>
+            <p class="canvas-noscript" id="cookie-canvas-help">Drag to turn the cookie. Chocolate can be hands-on.</p>
+          </div>
+          <div class="stage-sticker" aria-hidden="true">
+            <span>Baked</span>
+            <strong>Today</strong>
+            <small>even the good bits</small>
+          </div>
+          <span class="stage-caption" aria-hidden="true">01 / THE ORIGINAL CHUNK</span>
+        </div>
+      </div>
+
+      <div class="flavor-ticker" aria-hidden="true">
+        <div class="flavor-ticker-track">
+          <span>Brown butter bliss</span><i>✦</i><span>Chocolate, generously</span><i>✦</i><span>Baked for the plot</span><i>✦</i><span>Brown butter bliss</span><i>✦</i><span>Chocolate, generously</span><i>✦</i><span>Baked for the plot</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="cookie-collection section" id="cookies" aria-labelledby="cookies-title">
+      <div class="container">
+        <div class="section-heading collection-heading">
+          <div>
+            <p class="eyebrow"><span aria-hidden="true">01</span> The cookie counter</p>
+            <h2 id="cookies-title">Six ways to make<br><em>today delicious.</em></h2>
+          </div>
+          <p>Made in small batches, rested overnight, and finished by hand. Each one is a very good reason to put the kettle on.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card product-card-cocoa" data-product="classic-chunk">
+            <div class="product-media">
+              <span class="product-number">No. 01</span>
+              <span class="product-tag">The icon</span>
+              <img src="assets/classic-chunk.svg" alt="Golden Classic Chocolate Chunk cookie studded with dark chocolate pieces" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Brown butter · dark chocolate · sea salt</p>
+              <h3>Classic Chocolate Chunk</h3>
+              <p>A crisp, caramelized edge gives way to a soft middle and puddles of 64% dark chocolate.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$4.80</span>
+                <button class="add-to-cart" type="button" data-product-id="classic-chunk" data-name="Classic Chocolate Chunk" data-price="4.80" data-image="assets/classic-chunk.svg" aria-label="Add Classic Chocolate Chunk to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-apricot" data-product="brown-butter">
+            <div class="product-media">
+              <span class="product-number">No. 02</span>
+              <span class="product-tag">Toasty</span>
+              <img src="assets/brown-butter.svg" alt="Brown Butter Sea Salt cookie with toasted edges and a glossy center" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Hazelnutty butter · smoked salt · vanilla</p>
+              <h3>Brown Butter Sea Salt</h3>
+              <p>Deep, nutty dough with a subtle vanilla finish, finished with a sparkle of smoked sea salt.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$5.00</span>
+                <button class="add-to-cart" type="button" data-product-id="brown-butter" data-name="Brown Butter Sea Salt" data-price="5.00" data-image="assets/brown-butter.svg" aria-label="Add Brown Butter Sea Salt to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-lilac" data-product="cookies-cream">
+            <div class="product-media">
+              <span class="product-number">No. 03</span>
+              <span class="product-tag">Dunkable</span>
+              <img src="assets/cookies-cream.svg" alt="Cookies and Cream cookie packed with cocoa cookie pieces and cream chocolate" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Cocoa crumble · white chocolate · vanilla</p>
+              <h3>Cookies &amp; Cream</h3>
+              <p>Crunchy cocoa-cookie rubble meets creamy white chocolate in a soft vanilla dough.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$5.20</span>
+                <button class="add-to-cart" type="button" data-product-id="cookies-cream" data-name="Cookies & Cream" data-price="5.20" data-image="assets/cookies-cream.svg" aria-label="Add Cookies and Cream to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-rose" data-product="red-velvet">
+            <div class="product-media">
+              <span class="product-number">No. 04</span>
+              <span class="product-tag">Soft spot</span>
+              <img src="assets/red-velvet.svg" alt="Deep red Red Velvet Dream cookie with ivory cream cheese pieces" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Cocoa · tangy cream cheese · velvet crumb</p>
+              <h3>Red Velvet Dream</h3>
+              <p>A tender cocoa-red velvet cookie with ribbons of cream-cheese truffle in every bite.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$5.40</span>
+                <button class="add-to-cart" type="button" data-product-id="red-velvet" data-name="Red Velvet Dream" data-price="5.40" data-image="assets/red-velvet.svg" aria-label="Add Red Velvet Dream to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-pistachio" data-product="peanut-butter">
+            <div class="product-media">
+              <span class="product-number">No. 05</span>
+              <span class="product-tag">Big crunch</span>
+              <img src="assets/peanut-butter.svg" alt="Peanut Butter Explosion cookie with peanut pieces and a chocolate center" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Roasted peanut · milk chocolate · sea salt</p>
+              <h3>Peanut Butter Explosion</h3>
+              <p>Roasted peanut dough, toasted peanuts, and a molten milk-chocolate center. Loud in the best way.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$5.10</span>
+                <button class="add-to-cart" type="button" data-product-id="peanut-butter" data-name="Peanut Butter Explosion" data-price="5.10" data-image="assets/peanut-butter.svg" aria-label="Add Peanut Butter Explosion to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card-butter" data-product="triple-chocolate">
+            <div class="product-media">
+              <span class="product-number">No. 06</span>
+              <span class="product-tag">Deep cut</span>
+              <img src="assets/triple-chocolate.svg" alt="Dark Triple Chocolate Fudge cookie layered with milk and white chocolate" width="720" height="720" loading="lazy" decoding="async">
+            </div>
+            <div class="product-body">
+              <p class="product-note">Three chocolates · espresso · fudge</p>
+              <h3>Triple Chocolate Fudge</h3>
+              <p>Dark, milk, and white chocolate folded through rich fudge dough with a whisper of espresso.</p>
+              <div class="product-footer">
+                <span class="product-price"><span class="sr-only">Price: </span>$5.60</span>
+                <button class="add-to-cart" type="button" data-product-id="triple-chocolate" data-name="Triple Chocolate Fudge" data-price="5.60" data-image="assets/triple-chocolate.svg" aria-label="Add Triple Chocolate Fudge to cart">
+                  Add to box <span aria-hidden="true">+</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="about" aria-labelledby="story-title">
+      <div class="story-spiral" aria-hidden="true">
+        <span>Our kind of recipe</span>
+        <span>Our kind of recipe</span>
+        <span>Our kind of recipe</span>
+      </div>
+      <div class="container story-layout">
+        <div class="story-media">
+          <div class="story-image-wrap">
+            <img src="assets/bakery-story.svg" alt="Illustrated Crumb and Co. bakers shaping cookie dough at a warm, sunlit bakery workbench" width="900" height="1100" loading="lazy" decoding="async">
+          </div>
+          <div class="story-stamp" aria-hidden="true">
+            <span>Hand-folded</span>
+            <strong>with<br>feeling</strong>
+            <span>since 2021-ish</span>
+          </div>
+          <p class="story-caption"><span>Our imaginary kitchen</span> / Brookhollow, somewhere nice</p>
+        </div>
+
+        <div class="story-copy">
+          <p class="eyebrow eyebrow-light"><span aria-hidden="true">02</span> The delicious backstory</p>
+          <h2 id="story-title">Good cookies.<br><em>No secret handshakes.</em></h2>
+          <p class="story-lead">Crumb &amp; Co. began with a borrowed mixer, a stubborn belief that “one more chunk” is always the right answer, and the kind of kitchen mess worth cleaning up.</p>
+          <p>Today, we make every batch with proper butter, thoughtful chocolate, and enough time for the dough to become its best self. No shortcuts hiding in the fine print—just generous cookies baked for the people you like best.</p>
+          <ul class="story-principles" aria-label="Our baking principles">
+            <li>
+              <span class="principle-number">01</span>
+              <div><h3>Rested overnight</h3><p>Time deepens the flavor and gives each cookie its signature chewy middle.</p></div>
+            </li>
+            <li>
+              <span class="principle-number">02</span>
+              <div><h3>Honest ingredients</h3><p>Real butter, fragrant vanilla, thoughtful chocolate. Nothing you need a decoder for.</p></div>
+            </li>
+            <li>
+              <span class="principle-number">03</span>
+              <div><h3>Baked in small runs</h3><p>We favor attention over volume—and crisp edges over conveyor belts.</p></div>
+            </li>
+          </ul>
+          <a class="button button-cream" href="#contact">Send us a sweet note <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews section" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="reviews-heading">
+          <div>
+            <p class="eyebrow"><span aria-hidden="true">03</span> Crumbs of approval</p>
+            <h2 id="reviews-title">Love at first <em>bite.</em></h2>
+          </div>
+          <div class="rating-summary" aria-label="Fictional average rating: 4.9 out of 5">
+            <strong>4.9</strong>
+            <div><span aria-hidden="true">★★★★★</span><small>from our imaginary fan club</small></div>
+          </div>
+        </div>
+
+        <div class="review-grid">
+          <figure class="review-card review-card-featured">
+            <div class="review-topline">
+              <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="review-occasion">The birthday box</span>
+            </div>
+            <blockquote>“The classic chunk has actual architecture: crisp on the outside, tender in the middle, chocolate everywhere. I may have hidden the last one.”</blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">JM</span>
+              <span><strong>Jamie M.</strong><small>Professional crumb inspector</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review-card">
+            <div class="review-topline">
+              <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="review-occasion">Office peace offering</span>
+            </div>
+            <blockquote>“Ordered a mix for the team. The red velvet disappeared in four minutes, and I’m now invited to every meeting.”</blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">AT</span>
+              <span><strong>Alex T.</strong><small>Meeting attendee, finally popular</small></span>
+            </figcaption>
+          </figure>
+
+          <figure class="review-card review-card-tilted">
+            <div class="review-topline">
+              <span class="review-stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <span class="review-occasion">Friday survival kit</span>
+            </div>
+            <blockquote>“Warm the triple chocolate for eight seconds. It should probably come with a ‘cancel all plans’ warning.”</blockquote>
+            <figcaption>
+              <span class="review-avatar" aria-hidden="true">RK</span>
+              <span><strong>Rowan K.</strong><small>Verified treat enthusiast</small></span>
+            </figcaption>
+          </figure>
+        </div>
+        <p class="demo-disclosure">These testimonials and people are fictional, created for this demonstration.</p>
+      </div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-layout">
+        <div class="contact-copy">
+          <p class="eyebrow eyebrow-light"><span aria-hidden="true">04</span> Keep in the crumb loop</p>
+          <h2 id="contact-title">A sweet note<br>is always <em>welcome.</em></h2>
+          <p>Questions, gifting ideas, or a passionate opinion about the proper ratio of cookie to milk? Our (fictional) counter team is all ears.</p>
+          <address class="contact-details">
+            <div>
+              <span>Visit the imaginary studio</span>
+              <strong>18 Shortbread Lane<br>Brookhollow, NY 10000</strong>
+            </div>
+            <div>
+              <span>Opening hours</span>
+              <strong>Tue–Fri, 9–5<br>Sat–Sun, 10–3</strong>
+            </div>
+            <div>
+              <span>Write to us</span>
+              <a href="mailto:hello@crumbandco.example">hello@crumbandco.example</a>
+            </div>
+          </address>
+          <p class="contact-demo-note"><span aria-hidden="true">ⓘ</span> Demo brand, address, hours, email, and checkout. No real orders or payments.</p>
+        </div>
+
+        <div class="newsletter-card">
+          <div class="newsletter-doodle" aria-hidden="true">
+            <svg viewBox="0 0 90 90" focusable="false">
+              <path d="M45 9v18M45 63v18M9 45h18M63 45h18M19.5 19.5l13 13M57.5 57.5l13 13M70.5 19.5l-13 13M32.5 57.5l-13 13"/>
+              <circle cx="45" cy="45" r="14"/>
+            </svg>
+          </div>
+          <p class="newsletter-kicker">Fresh drops, no spam</p>
+          <h3>Good things come to those who <em>subscribe.</em></h3>
+          <p>First dibs on new flavors, tiny-batch dates, and notes from the kitchen. A delightful fictional inbox awaits.</p>
+          <form id="newsletter-form" class="newsletter-form" novalidate>
+            <label for="newsletter-email">Email address</label>
+            <div class="newsletter-input-row">
+              <input id="newsletter-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com" aria-describedby="newsletter-status" required>
+              <button type="submit" aria-label="Join the Crumb and Company demo newsletter">
+                Join the list
+                <svg aria-hidden="true" viewBox="0 0 20 20" focusable="false"><path d="m4 10 11 0m-4-4 4 4-4 4"/></svg>
+              </button>
+            </div>
+            <p id="newsletter-status" class="newsletter-status" role="status" aria-live="polite">A local demo only—your address is never sent anywhere.</p>
+          </form>
+          <div class="newsletter-perks">
+            <span>↳ Flavor sneak peeks</span>
+            <span>↳ Zero boring emails</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#home" aria-label="Crumb and Company, back to top">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" focusable="false">
+            <path d="M24 3.5c11.32 0 20.5 9.18 20.5 20.5S35.32 44.5 24 44.5 3.5 35.32 3.5 24 12.68 3.5 24 3.5Z"/>
+            <circle cx="16" cy="15" r="2.7"/><circle cx="30.5" cy="13.5" r="2.2"/><circle cx="30" cy="31.5" r="3.1"/><path d="M13 27.5c3.2 1.8 7.5 2.8 12 2.8 3.4 0 6.7-.6 9.5-1.7"/>
+          </svg>
+        </span>
+        <span class="brand-name">Crumb <i>&amp;</i> Co.</span>
+      </a>
+      <p class="footer-tagline">Made with butter.<br>Remembered for chocolate.</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#cookies">Shop the cookies</a>
+        <a href="#about">Our small story</a>
+        <a href="#reviews">Sweet reviews</a>
+        <a href="#contact">Say hello</a>
+      </nav>
+      <div class="footer-socials" aria-label="Fictional demonstration social links">
+        <p>Find the crumbs</p>
+        <a href="mailto:hello@crumbandco.example?subject=Instagram%20demo%20for%20Crumb%20and%20Co">Instagram <span>demo ↗</span></a>
+        <a href="mailto:hello@crumbandco.example?subject=Pinterest%20demo%20for%20Crumb%20and%20Co">Pinterest <span>demo ↗</span></a>
+        <a href="#newsletter-form">Newsletter <span>local ↗</span></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Crumb &amp; Co. A fictional demonstration bakery.</p>
+      <a href="#home">Back to the good bit <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <div class="cart-layer" aria-hidden="true">
+    <button id="cart-backdrop" class="cart-backdrop" type="button" aria-label="Close shopping cart" tabindex="-1"></button>
+    <aside id="cart-drawer" class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">A very good decision</p>
+          <h2 id="cart-title">Your cookie box</h2>
+        </div>
+        <button id="cart-close" class="icon-button" type="button" aria-label="Close shopping cart">
+          <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="cart-content">
+        <p id="cart-empty" class="cart-empty">
+          <span aria-hidden="true">◌</span>
+          Your box is feeling a little light.<br>
+          <a href="#cookies">Choose something wonderful</a>
+        </p>
+        <ul id="cart-items" class="cart-items" aria-label="Items in your cart"></ul>
+      </div>
+      <div class="cart-footer">
+        <div class="cart-subtotal-row">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">$0.00</strong>
+        </div>
+        <p>Fictional checkout · no payment will be requested</p>
+        <button id="checkout-button" class="button button-primary checkout-button" type="button" disabled>
+          Try the demo checkout <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <dialog id="checkout-dialog" class="checkout-dialog" aria-labelledby="checkout-title" aria-describedby="checkout-demo-note">
+    <div class="checkout-shell">
+      <button id="checkout-close" class="icon-button checkout-close" type="button" aria-label="Close checkout">
+        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+      <div class="checkout-heading">
+        <p class="eyebrow">Last stop before happy</p>
+        <h2 id="checkout-title">Demo checkout</h2>
+        <p id="checkout-demo-note" class="checkout-demo-note"><span>Fictional only</span> No payment details, order, or personal data are collected or sent.</p>
+      </div>
+
+      <form id="checkout-form" class="checkout-form">
+        <fieldset>
+          <legend>Your pretend pickup</legend>
+          <label for="checkout-name">Name for the box</label>
+          <input id="checkout-name" name="name" type="text" autocomplete="off" maxlength="60" placeholder="Cookie lover">
+
+          <label for="checkout-fulfilment">Fictional fulfilment</label>
+          <select id="checkout-fulfilment" name="fulfilment">
+            <option value="bakery-pickup">Pick up at the imaginary bakery</option>
+            <option value="demo-gift">Pack as a pretend gift</option>
+            <option value="demo-local">Try a pretend local delivery</option>
+          </select>
+        </fieldset>
+
+        <div class="checkout-order">
+          <h3>Your box</h3>
+          <ul id="checkout-order-summary" aria-label="Demo order summary"></ul>
+          <div class="checkout-total-row">
+            <span>Total</span>
+            <strong id="checkout-total">$0.00</strong>
+          </div>
+        </div>
+
+        <button class="button button-primary checkout-submit" type="submit">Place fictional order <span aria-hidden="true">→</span></button>
+        <p class="checkout-fine-print">This button only demonstrates the experience. Nothing is purchased or transmitted.</p>
+      </form>
+
+      <div id="checkout-confirmation" class="checkout-confirmation" role="status" aria-live="polite" hidden>
+        <span class="confirmation-cookie" aria-hidden="true">✓</span>
+        <p class="eyebrow">That was deliciously fictional</p>
+        <h3>Your demo order is in!</h3>
+        <p>No payment was taken and no order was sent. You are, however, welcome to celebrate with a real cookie.</p>
+        <button class="button button-dark" id="checkout-done" type="button">Back to the cookies</button>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast-region" class="toast-region" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="cookie-3d.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
